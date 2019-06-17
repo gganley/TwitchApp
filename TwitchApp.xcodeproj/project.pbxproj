@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE18656522AECFA50067F9A2 /* ChannelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE18656422AECFA40067F9A2 /* ChannelRow.swift */; };
+		FE18656722AED76F0067F9A2 /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE18656622AED76F0067F9A2 /* ChannelView.swift */; };
 		FE1AAD3522A83E2B00222333 /* TwitchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FE1AAD3422A83E2B00222333 /* TwitchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FE1AAD3B22A83E2B00222333 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1AAD3922A83E2B00222333 /* Interface.storyboard */; };
 		FE1AAD3D22A83E2D00222333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1AAD3C22A83E2D00222333 /* Assets.xcassets */; };
@@ -18,6 +20,9 @@
 		FE1AAD5122A83E2D00222333 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1AAD5022A83E2D00222333 /* NotificationView.swift */; };
 		FE1AAD5322A83E2E00222333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1AAD5222A83E2E00222333 /* Assets.xcassets */; };
 		FE1AAD5622A83E2E00222333 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1AAD5522A83E2E00222333 /* Preview Assets.xcassets */; };
+		FE1AAD6B22AAB05C00222333 /* channelData.json in Resources */ = {isa = PBXBuildFile; fileRef = FE1AAD6A22AAB05C00222333 /* channelData.json */; settings = {ASSET_TAGS = (channelData, ); }; };
+		FE1AAD6F22AAB49A00222333 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1AAD6E22AAB49A00222333 /* Channel.swift */; };
+		FE1AAD7122AAB83700222333 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1AAD7022AAB83700222333 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FE18656422AECFA40067F9A2 /* ChannelRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelRow.swift; sourceTree = "<group>"; };
+		FE18656622AED76F0067F9A2 /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
 		FE1AAD3022A83E2B00222333 /* TwitchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1AAD3422A83E2B00222333 /* TwitchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TwitchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1AAD3A22A83E2B00222333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -78,6 +85,9 @@
 		FE1AAD5522A83E2E00222333 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE1AAD5722A83E2E00222333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1AAD5822A83E2E00222333 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FE1AAD6A22AAB05C00222333 /* channelData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = channelData.json; sourceTree = "<group>"; };
+		FE1AAD6E22AAB49A00222333 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		FE1AAD7022AAB83700222333 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,8 @@
 		FE1AAD4722A83E2D00222333 /* TwitchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FE1AAD6922AAB03900222333 /* Models */,
+				FE1AAD6822AAB02500222333 /* Resources */,
 				FE1AAD4822A83E2D00222333 /* ContentView.swift */,
 				FE1AAD4A22A83E2D00222333 /* HostingController.swift */,
 				FE1AAD4C22A83E2D00222333 /* ExtensionDelegate.swift */,
@@ -142,6 +154,25 @@
 				FE1AAD5522A83E2E00222333 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE1AAD6822AAB02500222333 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE1AAD6A22AAB05C00222333 /* channelData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE1AAD6922AAB03900222333 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE1AAD6E22AAB49A00222333 /* Channel.swift */,
+				FE1AAD7022AAB83700222333 /* Data.swift */,
+				FE18656422AECFA40067F9A2 /* ChannelRow.swift */,
+				FE18656622AED76F0067F9A2 /* ChannelView.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +235,9 @@
 		FE1AAD2A22A83E2B00222333 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					channelData,
+				);
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Gregory Ganley";
@@ -262,6 +296,7 @@
 			files = (
 				FE1AAD5622A83E2E00222333 /* Preview Assets.xcassets in Resources */,
 				FE1AAD5322A83E2E00222333 /* Assets.xcassets in Resources */,
+				FE1AAD6B22AAB05C00222333 /* channelData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1AAD6F22AAB49A00222333 /* Channel.swift in Sources */,
 				FE1AAD4B22A83E2D00222333 /* HostingController.swift in Sources */,
 				FE1AAD4922A83E2D00222333 /* ContentView.swift in Sources */,
+				FE18656722AED76F0067F9A2 /* ChannelView.swift in Sources */,
 				FE1AAD4F22A83E2D00222333 /* NotificationController.swift in Sources */,
+				FE18656522AECFA50067F9A2 /* ChannelRow.swift in Sources */,
 				FE1AAD4D22A83E2D00222333 /* ExtensionDelegate.swift in Sources */,
 				FE1AAD5122A83E2D00222333 /* NotificationView.swift in Sources */,
+				FE1AAD7122AAB83700222333 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

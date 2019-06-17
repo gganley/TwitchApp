@@ -7,10 +7,18 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView : View {
+    @State private var session = AVAudioSession.sharedInstance()
+
     var body: some View {
-        Text("Hello World")
+        List(channelData) { channel in
+            NavigationButton(destination: ChannelView(channel: channel, session: self.$session)) {
+                ChannelRow(channel: channel)
+                }
+        }
+        .listStyle(.carousel)
     }
 }
 
