@@ -10,11 +10,9 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView : View {
-    @State private var session = AVAudioSession.sharedInstance()
-
     var body: some View {
         List(channelData) { channel in
-            NavigationButton(destination: ChannelView(channel: channel, session: self.$session)) {
+            NavigationButton(destination: ChannelView(channel: channel)) {
                 ChannelRow(channel: channel)
                 }
         }
